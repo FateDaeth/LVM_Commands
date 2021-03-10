@@ -21,23 +21,24 @@ resize2fs — This command extends the unallocated space of the partition withou
 
 
 ### Steps
-
-1. pvcreate /dev/sdb
-
+```
+ pvcreate /dev/sdb
+```
  * '/dev/sdb' is the Volume attached.
-
-2. vgcreate tk7 /dev/sdb 
-
+```
+ vgcreate tk7 /dev/sdb 
+```
  * 'tk7' - is the name of Volume Group
  * 'dev/sdb' - pv name
-
-3. lvcreate --size +4G tk7 -n tk7lv
-
+```
+ lvcreate --size +4G tk7 -n tk7lv
+```
  * 'tk7' - vg name
  * 'tk7lv' - lv name
-
-4. mkfs.ext4 /dev/tk7/tk7lv
-
+```
+ mkfs.ext4 /dev/tk7/tk7lv
+```
  * It will format the storage.
-
-5. mount and enjoy..!!
+```
+mount and enjoy..!!
+```
