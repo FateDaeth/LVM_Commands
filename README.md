@@ -1,8 +1,9 @@
 # LVM_Commands
 
 #### To Install LVM
-
+```
  yum install lvm2
+```
 
 pvcreate — This command converts the attached Disk or external disk into physical volume.
 
@@ -23,20 +24,20 @@ resize2fs — This command extends the unallocated space of the partition withou
 
 1. pvcreate /dev/sdb
 
-'/dev/sdb' is the Volume attached.
+ * '/dev/sdb' is the Volume attached.
 
 2. vgcreate tk7 /dev/sdb 
 
- 'tk7' - is the name of Volume Group
- 'dev/sdb' - pv name
+ * 'tk7' - is the name of Volume Group
+ * 'dev/sdb' - pv name
 
 3. lvcreate --size +4G tk7 -n tk7lv
 
-'tk7' - vg name
-'tk7lv' - lv name
+ * 'tk7' - vg name
+ * 'tk7lv' - lv name
 
 4. mkfs.ext4 /dev/tk7/tk7lv
 
-It will format the storage.
+ * It will format the storage.
 
 5. mount and enjoy..!!
